@@ -1,0 +1,138 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-weight: 300
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.hero
+	background: #221f1f
+	padding-top: 30px
+	position: relative
+	&-top
+		&-logo
+			text-align: left
+			padding-top: 10px
+			img
+				width: 100px
+		&-menu
+			text-align: right
+			ul
+				list-style: none
+				li
+					display: inline-block
+					margin-right: 10px
+					vertical-align: middle
+					text-align: center
+					&.active a
+						background: $accent
+					&:last-child
+						margin-right: 0
+						a
+							transition: all .2s ease-in
+							line-height: 1
+							padding-top: 10px
+							i
+								font-size: 20px
+							&:hover,&:focus
+								color: $accent
+							&:after
+								display: none
+					a
+						display: block
+						color: #fff
+						padding: 0 20px
+						text-align: center
+						position: relative
+						span
+							z-index: 2
+							position: relative
+						&:after
+							content: ""
+							height: 0
+							width: 100%
+							transition: all .2s ease-in
+							display: block
+							position: absolute
+							background: $accent
+							bottom: 0
+							left: 0
+							z-index: 1
+						&:hover,&:focus
+							text-decoration: none
+							&:after
+								height: 100%
+	&-title
+		text-align: center
+		width: 500px
+		margin: 0 auto
+		padding: 170px 0
+		position: relative
+		&-main
+			font-size: 80px
+			line-height: 95%
+			font-weight: 500
+			color: #fff
+			span
+				color: $accent
+		&-link
+			text-align: center
+			padding-top: 20px
+			a
+				line-height: 100%
+				color: #fff
+				text-decoration: underline
+				transition: all .2s ease-in
+				font-size: 14px
+				&:hover,&:focus
+					color: $accent
+
+
+@import "media" // Всегда в конце
