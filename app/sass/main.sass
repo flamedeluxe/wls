@@ -113,7 +113,7 @@ body
 		text-align: center
 		width: 500px
 		margin: 0 auto
-		padding: 170px 0
+		padding: 270px 0 320px
 		position: relative
 		&-main
 			font-size: 80px
@@ -140,12 +140,12 @@ body
 		font-size: 30px
 		font-weight: 500
 		position: relative
-		padding-left: 250px
+		padding-left: 300px
 		margin-bottom: 60px
 		div
 			position: absolute
 			bottom: -22px
-			left: 0
+			left: 50px
 			background: url(../img/left-corner.svg) no-repeat
 			background-size: 175px
 			width: 175px
@@ -155,9 +155,72 @@ body
 		background-position: center center
 		height: 370px
 		position: relative
+		transition: all 1s ease
+		background-size: 100%
+		background-blend-mode: soft-light
+		margin-bottom: 40px
+		&:hover,&:focus
+			background-color: #141514 !important
+			background-size: 110%
+		.link a
+			color: #fff
+			font-weight: 300
+			display: inline-block
+			text-decoration: none
+			border: 1px solid #fff
+			padding: 2px 10px
+			transition: all .5s ease-in
+			font-size: 14px
+			position: relative
+			span
+				position: relative
+				z-index: 2
+			&:after
+				content: ""
+				height: 0
+				width: 100%
+				transition: all .2s ease-in
+				display: block
+				position: absolute
+				background: $accent
+				bottom: 0
+				left: 0
+				z-index: 1
+			&:hover,&:focus
+				text-decoration: none
+				border-color: $accent
+				&:after
+					height: 100%
+		.tags
+			position: absolute
+			bottom: 30px
+			text-align: center
+			width: 100%
+			padding: 0 30px
+			ul
+				list-style: none
+				margin: 0
+				padding-left: 0
+				line-height: 120%
+				li
+					display: inline-flex
+					margin-right: 5px
+					a
+						display: block
+						color: #fff
+						font-size: 14px
+						text-decoration: none
+						transition: color .3s ease-in
+						&:hover,&:focus
+							color: $accent
+						&:before
+							content: "#"
+							display: inline-block
+							margin-right: 2px
+					&:last-child
+						margin-right: 0
 		&1
 			background-color: #ffcb05
-			background-blend-mode: soft-light
 			.caption
 				position: relative
 				z-index: 2
@@ -175,66 +238,167 @@ body
 						transition: color .3s ease-in
 						&:hover,&:focus
 							color: $accent
-				.link a
-					color: #fff
-					font-weight: 300
-					display: inline-block
-					text-decoration: none
-					border: 1px solid #fff
-					padding: 2px 10px
-					transition: all .5s ease-in
-					font-size: 14px
-					position: relative
-					span
-						position: relative
-						z-index: 2
-					&:after
-						content: ""
-						height: 0
-						width: 100%
-						transition: all .2s ease-in
-						display: block
-						position: absolute
-						background: $accent
-						bottom: 0
-						left: 0
-						z-index: 1
-					&:hover,&:focus
-						text-decoration: none
-						border-color: $accent
-						&:after
-							height: 100%
-				.tags 
-					position: absolute
-					bottom: 20px
-					text-align: center
-					width: 100%
-					padding: 0 30px
-					ul
-						list-style: none
-						margin: 0
-						padding-left: 0
-						line-height: 120%
-						li
-							display: inline-flex
-							margin-right: 5px
-							a
-								display: block
-								color: #fff
-								font-size: 14px
-								text-decoration: none
-								transition: color .3s ease-in
-								&:hover,&:focus
-									color: $accent
-								&:before
-									content: "#"
-									display: inline-block
-									margin-right: 2px
-							&:last-child
-								margin-right: 0
+		
 		&2
+			background-color: #079752
+			.caption
+				position: relative
+				z-index: 2
+				height: 100%
+				text-align: center
+				.title
+					padding-top: 140px
+					font-weight: 500
+					font-size: 24px
+					color: #fff
+					position: relative
+					a
+						color: #fff
+						text-decoration: none
+						transition: color .3s ease-in
+						&:hover,&:focus
+							color: $accent
 		&3
+			background-color: #079752
+			.caption
+				position: absolute
+				z-index: 2
+				width: 100%
+				height: 100px
+				padding: 0 30px
+				bottom: 0
+				.title
+					font-weight: 500
+					font-size: 24px
+					color: #fff
+					position: relative
+					a
+						color: #fff
+						text-decoration: none
+						transition: color .3s ease-in
+						&:hover,&:focus
+							color: $accent
+				.link
+					float: left
+					width: 25%
+				.tags
+					position: static
+					text-align: left
+					padding: 0
+					float: left
+					padding-top: 5px
+					width: 75%
 		&4
+			background-color: #079752
+			.caption
+				position: relative
+				z-index: 2
+				height: 100%
+				text-align: center
+				.title
+					padding-top: 140px
+					font-weight: 500
+					font-size: 24px
+					color: #fff
+					position: relative
+					a
+						color: #fff
+						text-decoration: none
+						transition: color .3s ease-in
+						&:hover,&:focus
+							color: $accent
 
+.newsBlock
+	padding-top: 50px
+	margin-bottom: 140px
+	&-title
+		font-weight: 500
+		font-size: 30px
+		padding-left: 300px
+		position: relative
+		margin-bottom: 100px
+		div
+			position: absolute
+			bottom: -17px
+			left: 100px
+			background: #221f1f
+			transform: rotate(45deg)
+			width: 87px
+			height: 87px
+	&-item
+		.title
+			font-size: 18px
+			font-weight: 500
+			line-height: 120%
+			margin-bottom: 15px
+			max-width: 250px
+		.date
+			font-weight: 300
+			margin-bottom: 15px
+			color: #808080
+			max-width: 250px
+		.intro
+			max-width: 280px
+			line-height: 120%
+			font-weight: 400
+		.readmore
+			margin-top: 20px
+			a
+				color: $accent
+				text-decoration: none
+				display: inline-block
+				transition: all .3s ease
+				padding: 2px 0
+				font-size: 14px
+				&:hover,&:focus
+					background: $accent
+					color: #fff
+					padding: 2px 10px
+.relative
+	position: relative
+
+.feedbackBlock
+	padding: 40px 0 70px
+	background: $accent
+	overflow: hidden
+	.s
+		background: url(../img/s.svg) no-repeat
+		background-size: 100%
+		width: 210px
+		height: 400px
+		position: absolute
+		left: 130px
+		top: -112px
+	&-title
+		font-size: 18px
+		font-weight: 300
+		color: #fff
+		margin-bottom: 20px
+	form
+		.form-group
+			width: 31.333%
+			float: left
+			margin-right: 2%
+			input
+				border: none
+				width: 100%
+				height: 45px
+				padding: 0 15px
+				&:hover,&:focus
+					outline: none
+			button
+				background: #221f1f
+				border: none
+				color: #fff
+				height: 45px
+				padding: 0 20px
+				font-size: 18px
+				&:hover,&:focus
+					outline: none
+			&:nth-child(2)
+				margin-right: 0
+
+.footer
+	
 
 @import "media" // Всегда в конце
