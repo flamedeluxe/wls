@@ -1,0 +1,21 @@
+{
+  "name": "wls agency",
+  "description": "wls",
+  "main": "index.html",
+  "authors": [
+    "firefox"
+  ],
+  "license": "ISC",
+  "homepage": "wls.agency",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-grid": "^4.0.1"
+  }
+}
